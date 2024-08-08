@@ -7,118 +7,23 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/heading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Security"
-        android:layout_marginTop="10dp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@id/pinkCard">
-    </TextView>
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/pinkCard"
+    <FrameLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
-        app:layout_constraintTop_toBottomOf="@id/heading"
-        app:cardBackgroundColor="#EB6F78"
-        android:layout_margin="18dp"
-        app:cardCornerRadius="10dp">
-
-    </com.google.android.material.card.MaterialCardView>
-    <TextView
-        android:id="@+id/SOSTextviewDetails"
-        android:layout_margin="5dp"
-        app:layout_constraintStart_toStartOf="@+id/pinkCard"
-        app:layout_constraintEnd_toEndOf="@id/pinkCard"
-        app:layout_constraintTop_toBottomOf="@id/SOSTextview"
-        app:layout_constraintEnd_toStartOf="@id/SOSimg"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:text="In case of emergency keep telling my family members to contact me" />
-
-
-    <ImageView
-        android:id="@+id/SOSimg"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
-        android:src="@drawable/sos"
-        app:layout_constraintEnd_toEndOf="@id/pinkCard"
-        app:layout_constraintTop_toTopOf="@id/pinkCard"
-        app:layout_constraintBottom_toBottomOf="@id/pinkCard">
-    </ImageView>
-
-    <TextView
-        android:id="@+id/SOSTextview"
-        android:elevation="8dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="SOS"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/pinkCard"
-        app:layout_constraintTop_toTopOf="@+id/pinkCard" />
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/blueCard"
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        app:layout_constraintTop_toBottomOf="@id/pinkCard"
-        app:cardBackgroundColor="#63D1C6"
-        app:cardCornerRadius="10dp"
-        android:layout_margin="18dp">
-    </com.google.android.material.card.MaterialCardView>
-
-    <ImageView
-        android:id="@+id/Gaurdimg"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
-        android:src="@drawable/gaurd"
-        app:layout_constraintEnd_toEndOf="@id/blueCard"
-        app:layout_constraintTop_toTopOf="@id/blueCard"
-        app:layout_constraintBottom_toBottomOf="@id/blueCard">
-    </ImageView>
-
-    <TextView
-        android:id="@+id/GuardTextview"
-        android:elevation="8dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="GUARD"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/blueCard"
-        app:layout_constraintTop_toTopOf="@+id/blueCard" />
-
-    <TextView
-        android:id="@+id/GuardTextviewDetails"
-        app:layout_constraintStart_toStartOf="@+id/blueCard"
-        app:layout_constraintEnd_toEndOf="@id/blueCard"
-        app:layout_constraintTop_toBottomOf="@id/GuardTextview"
-        android:layout_width="0dp"
-        android:textColor="@color/white"
-        android:layout_margin="5dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toStartOf="@id/Gaurdimg"
-        android:text="Open when you are on potentially dangerous journey"/>
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_bar"
         app:menu="@menu/bottom_bar_items"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="434dp"/>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
